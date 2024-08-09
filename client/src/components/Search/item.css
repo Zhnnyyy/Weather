@@ -1,0 +1,9 @@
+.itemContainer {
+  border-bottom: 1px solid #ababab;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.itemContainer p {
+  font-size: 14px;
+  font-weight: 400;
+}

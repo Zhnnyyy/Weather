@@ -1,0 +1,11 @@
+.resultContainer {
+  width: 100%;
+  position: absolute;
+  background: white;
+  max-height: 300px;
+  margin-top: 5px;
+  z-index: 1;
+  border-radius: 8px;
+  padding: 10px;
+  overflow: auto;
+}

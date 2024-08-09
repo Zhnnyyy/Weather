@@ -1,0 +1,29 @@
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.main-card {
+  background: #18181a;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+}
+.info h2 {
+  font-size: 40px;
+}
+.info span {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.card-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
