@@ -7,6 +7,7 @@ const port = 4000;
 
 app.use(express.json());
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(
   cors({
     origin: "https://weather-client-ebon.vercel.app",
