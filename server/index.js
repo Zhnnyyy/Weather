@@ -7,7 +7,12 @@ const port = 4000;
 
 app.use(express.json());
 app.use(bodyParser.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://weather-client-ebon.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 
 app.post("/location", async (req, res) => {
   const url = `https://api.locationiq.com/v1/autocomplete?key=${process.env.LOCATION_KEY}&q=${req.body.location}`;
