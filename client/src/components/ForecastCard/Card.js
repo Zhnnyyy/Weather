@@ -14,7 +14,7 @@ function Card(props) {
     <div className="cardItem">
       <h2>{Math.round(Math.abs(273.15 - props.temp))} °C</h2>
       <h3>{props.date}</h3>
-      <h5>{formatDate(props.date)}</h5>
+      <h5>{formatDate(props.day)}</h5>
       <img
         src={`https://openweathermap.org/img/wn/${props.icon}@2x.png`}
         alt="icon"

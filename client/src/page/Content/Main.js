@@ -103,6 +103,7 @@ function Main(props) {
           forecast.map((item, index) => (
             <Card
               key={index}
+              day={item.dt_txt}
               date={item.dt_txt.split(" ")[0]}
               temp={item.main.temp}
               icon={item.weather[0].icon}
