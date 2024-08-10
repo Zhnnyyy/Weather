@@ -8,12 +8,7 @@ const port = 4000;
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(
-  cors({
-    origin: "https://weather-server-lilac.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-  })
-);
+app.use(cors());
 
 app.post("/location", async (req, res) => {
   const url = `https://api.locationiq.com/v1/autocomplete?key=${process.env.LOCATION_KEY}&q=${req.body.location}`;
