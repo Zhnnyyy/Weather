@@ -10,6 +10,7 @@ function Main(props) {
       (pos) => {
         const lat = pos.coords.latitude;
         const lon = pos.coords.longitude;
+
         setCurrentLocation(`${lat},${lon}`);
       },
       (err) => {
@@ -55,10 +56,14 @@ function Main(props) {
     }
   };
 
-  if (currentLocation) {
-    findWeather(currentLocation);
-    findForecast(currentLocation);
-  }
+  useEffect(() => {
+    // console.log("location: ", props.locationName.length, "\n", currentLocation);
+
+    if (currentLocation && props.locationName.length === 0) {
+      findWeather(currentLocation);
+      findForecast(currentLocation);
+    }
+  }, [props.locationName, currentLocation]);
   useEffect(() => {
     if (props.location) {
       findWeather(props.location);
@@ -98,8 +103,8 @@ function Main(props) {
           forecast.map((item, index) => (
             <Card
               key={index}
-              date={item.dt_txt}
-              temp={item.main.temp.split(" ")[0]}
+              date={item.dt_txt.split(" ")[0]}
+              temp={item.main.temp}
               icon={item.weather[0].icon}
               desc={item.weather[0].description}
             />

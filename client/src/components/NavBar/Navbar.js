@@ -12,6 +12,7 @@ function Navbar(props) {
   function userInput(data) {
     setSearch(data.name);
     props.setLocation(data.location);
+    props.setHoldData(data.name);
 
     props.searching(false);
   }

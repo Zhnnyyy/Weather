@@ -40,7 +40,7 @@ function Search(props) {
           />
         ))
       ) : (
-        <p style={{ textAlign: "center" }}>No results found.</p>
+        <p style={{ textAlign: "center", color: "white" }}>No results found.</p>
       )}
     </div>
   );
