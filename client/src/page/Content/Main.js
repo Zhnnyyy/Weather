@@ -99,7 +99,7 @@ function Main(props) {
             <Card
               key={index}
               date={item.dt_txt}
-              temp={item.main.temp}
+              temp={item.main.temp.split(" ")[0]}
               icon={item.weather[0].icon}
               desc={item.weather[0].description}
             />
